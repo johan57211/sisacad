@@ -79,7 +79,7 @@ export default {
     async fetchConstancia(cui) {
       try {
         const response = await axios.get(
-          `${import.meta.env.VITE_API_BASE_URL}/restful/enrollment-certificate/?cui=${cui}`
+          `/api/restful/enrollment-certificate/?cui=${cui}`
         )
         const results = response.data.results
         this.student = results[0].student
